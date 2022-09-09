@@ -99,8 +99,14 @@
             return $this;
         }
 
+        public function query($query){
+            $this->query=$query;
+            return $this;
+        }
+
    }
 
+   //var_dump(DB::table('users')->query("SELECT * FROM users")->where('id','=','5')->get());
    //var_dump(DB::table('users')->all()->where('id','=',4)->get());
    //var_dump(DB::table('users')->find(4));
    //DB::table('users')->insert(['username','password'],['alireza',12345666]);
